@@ -1,33 +1,24 @@
 ---
-
+import Base from '@layouts/Base.astro';
 ---
 
-<html lang="ru">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="viewport" content="width=device-width" />
-		<!-- <meta name="generator" content={Astro.generator} /> -->
-		<title>@yastaraus</title>
-		<meta name="color-scheme" content="dark light">
-	</head>
-	<body>
-  	<div class="wrapper">
-    	<div class="content">
-       <h1>@yastaraus</h1>
-       <p>Пока ничего нет, и возможно, не будет. Я пока не придумал ничего.</p>
-       <p>Подписывайтесь <a href="https://bsky.app/profile/yastaraus.com">сюда</a>.</p>
-       <p>Спасибо.</p>
-     </div>
-  	</div>
-	</body>
-</html>
+<Base>
+  <div class="wrapper">
+   	<div class="content">
+      <p>Привет!</p>
+      <p>Я купил себе этот домен просто что бы сделать себе короткий handle в <a href="https://bsky.app/profile/yastaraus.com">bluesky</a>. Может быть потом сделаю здесь что-нибудь интересное, а пока как-то так.</p>
+      <div class="pics">
+        <img src="/img/011.webp" alt="">
+        <img src="/img/012.webp" alt="">
+        <img src="/img/013.webp" alt="">
+        <img src="/img/014.webp" alt="">
+      </div>
+      <p class="caption">Автор: <a href="https://twitter.com/smithey_alan100">Alan Smithey</a></p>
+    </div>
+ 	</div>
+</Base>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-}
 
 .wrapper {
   min-height: 100dvh;
@@ -38,5 +29,30 @@ body {
 
 .content {
   padding: 2em;
+  max-width: 80ch;
+
+  & > p {
+    margin-bottom: 1em;
+  }
 }
+
+.pics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em;
+
+  @media (width < 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & > img {
+    width: 100%;
+  }
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-size: 0.75rem;
+}
+
 </style>

@@ -1,0 +1,63 @@
+@import "./modern-reset.css";
+@import "./fonts.css";
+
+:root {
+  /* Colors */
+  --black: hsla(0, 0%, 7%, 1);
+  --white: hsla(48, 100%, 97%, 1);
+  --grey: hsla(50, 100%, 100%, 0.1);
+  --red: hsla(3, 62%, 42%, 1);
+
+  /* Site Pallete */
+  --color-base: var(--black);
+  --color-primary: var(--white);
+  --color-secondary: var(--grey);
+  --color-accent: var(--red);
+
+  /* Screens sizes */
+  --mobile-min: 320px;
+  --mobile-mid: 412px;
+  --tablet-min: 768px;
+  --tablet-mid: 962px;
+  --desktop-min: 1280px;
+  --desktop-mid: 1366px;
+
+  /* Gaps */
+  --gap-3xs: 0.25rem;
+  --gap-2xs: 0.5rem;
+  --gap-xs: 0.75rem;
+  --gap-s: 1rem;
+  --gap-base: 1.25rem;
+  --gap-l: 1.5rem;
+  --gap-xl: 1.75rem;
+  --gap-2xl: 2rem;
+  --gap-3xl: 2.25rem;
+}
+
+body {
+  position: relative;
+  max-width: unset;
+  margin-inline: unset;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--color-primary);
+  background-color: var(--color-base);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-color-scheme: light) {}
+@media (prefers-color-scheme: dark) {}
